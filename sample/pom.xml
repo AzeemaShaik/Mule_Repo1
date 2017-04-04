@@ -17,7 +17,24 @@
 	</properties>
 
 	<build>
-		<plugins>
+		<plugins><plugin>
+    <groupId>org.mule.tools.maven</groupId>
+    <artifactId>mule-maven-plugin</artifactId>
+    <version>2.0</version>
+    <configuration>
+        <deploymentType>standalone</deploymentType>
+        <muleVersion>3.8.3</muleVersion>
+    </configuration>
+    <executions>
+        <execution>
+            <id>deploy</id>
+            <phase>deploy</phase>
+            <goals>
+                <goal>deploy</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-app-maven-plugin</artifactId>
