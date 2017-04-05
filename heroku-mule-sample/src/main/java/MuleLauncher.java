@@ -80,7 +80,7 @@ public class MuleLauncher {
             }
         }
 
-        String[] muleConfigArray = muleConfigList.toArray(new String[muleConfigList.size()]);
+        String[] muleConfigArray = (String[]) muleConfigList.toArray(new String[muleConfigList.size()]);
         SpringXmlConfigurationBuilder configBuilder = new SpringXmlConfigurationBuilder(muleConfigArray);
         DefaultMuleContextFactory muleContextFactory = new DefaultMuleContextFactory();
 
